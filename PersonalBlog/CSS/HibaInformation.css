@@ -2,6 +2,7 @@
 @import url("HibaMain.css");
 
 /* Card Container */
+/* Card Container */
 .HibaSamicard-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -9,7 +10,7 @@
     justify-content: center;
     padding: 20px;
     background-color: transparent;
-    margin: 100px 0px;
+    margin: 50px 0px;
 }
 
 /* Card Styling */
@@ -17,7 +18,8 @@
     background: #fff;
     border-radius: 8px;
     overflow: hidden;
-    width: 600px;
+    width: 100%; /* Adjusted width to be responsive */
+    max-width: 600px; /* Max width to prevent it from stretching too wide */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
     display: flex;
@@ -54,6 +56,7 @@
     margin-bottom: 20px;
 }
 
+/* Card Button */
 .HibaSamicard-btn {
     padding: 10px 20px;
     color: #fff;
@@ -62,15 +65,15 @@
     text-align: center;
     text-decoration: none;
     transition: background-color 0.3s;
-    width: 200px;
-    align-items: center;
-    margin-left: 180px;
+    max-width: 200px;
+    margin: 0 auto; /* Center the button */
 }
 
 .HibaSamicard-btn:hover {
     background-color: #0056b3;
 }
 
+/* Image container styling */
 .HibaObead-img {
     text-align: center;
     margin-top: 20px;
@@ -84,13 +87,44 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .HibaSamicard {
-        width: 45%;
+    /* Adjust container margin for smaller screens */
+    .HibaSamicard-container {
+        margin: 30px 0;
+    }
+
+    /* Reduce title and description font sizes */
+    .HibaSamicard-title {
+        font-size: 1.25rem;
+    }
+
+    .HibaSamicard-description {
+        font-size: 0.9rem;
+    }
+
+    /* Adjust button padding for smaller screens */
+    .HibaSamicard-btn {
+        padding: 8px 16px;
+        max-width: 100%; /* Button will take the full width if needed */
     }
 }
 
 @media (max-width: 480px) {
-    .HibaSamicard {
+    /* Reduce padding in card content for very small screens */
+    .HibaSamicard-content {
+        padding: 15px;
+    }
+
+    /* Further reduce font sizes */
+    .HibaSamicard-title {
+        font-size: 1.1rem;
+    }
+
+    .HibaSamicard-description {
+        font-size: 0.85rem;
+    }
+
+    /* Make button full-width for very small screens */
+    .HibaSamicard-btn {
         width: 100%;
     }
 }

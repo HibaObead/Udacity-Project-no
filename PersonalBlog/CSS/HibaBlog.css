@@ -740,23 +740,70 @@ footer {
     }
 }
 
-/* Make footer social icons responsive */
-@media (max-width: 768px) {
-    .HibaObead-socialIcons a {
-        width: 30px;
-        height: 30px;
-        font-size: 1.5em;
-    }
-}
+/* Responsive Design */
 
-@media (max-width: 576px) {
+/* For tablets and small desktops (max-width: 768px) */
+@media (max-width: 768px) {
+    .HibaObead-footerContainer {
+        padding: 50px 20px 15px;
+    }
+
     .HibaObead-socialIcons a {
-        width: 25px;
-        height: 25px;
-        font-size: 1.2em;
+        padding: 8px;
+    }
+
+    .HibaObead-socialIcons a i {
+        font-size: 1.8em;
     }
 
     .HibaObead-footerNav ul li a {
-        font-size: 0.9em;
+        font-size: 1.1em;
+        margin: 15px;
+    }
+
+    .HibaObead-footerBottom p {
+        font-size: 1rem;
+    }
+
+    .HibaObead-designer {
+        font-size: 18px;
+    }
+}
+
+/* For mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .HibaObead-footerContainer {
+        padding: 40px 15px 10px;
+        text-align: center;
+    }
+
+    .HibaObead-socialIcons {
+        flex-direction: column;
+    }
+
+    .HibaObead-socialIcons a {
+        padding: 6px;
+        margin: 5px;
+    }
+
+    .HibaObead-socialIcons a i {
+        font-size: 1.5em;
+    }
+
+    .HibaObead-footerNav ul {
+        flex-direction: column;
+    }
+
+    .HibaObead-footerNav ul li a {
+        font-size: 1em;
+        margin: 10px;
+    }
+
+    .HibaObead-footerBottom p {
+        font-size: 0.9rem;
+    }
+
+    .HibaObead-designer {
+        font-size: 16px;
     }
 }
